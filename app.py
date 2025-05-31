@@ -1,12 +1,14 @@
 import streamlit as st
+from presentation import presentation_page
+from analysis_and_model import analysis_page  # создайте аналогичную функцию
 
 pages = {
-    "Анализ и модель": "analysis_and_model.py",
-    "Презентация": "presentation.py",
+    "Анализ и модель": analysis_page,
+    "Презентация": presentation_page,
 }
 
 st.sidebar.title("Навигация")
 selected_page = st.sidebar.radio("Выберите страницу", list(pages.keys()))
 
-with open(pages[selected_page], "r", encoding="utf-8") as file:
-    exec(file.read())
+# Вызов выбранной функции
+pages[selected_page]()
