@@ -8,6 +8,7 @@ Streamlit-приложение для прогнозирования отказ�
 git clone https://github.com/ilviz/predictive_maintenance_project.git
 cd predictive_maintenance_project
 pip install -r requirements.txt
-
+```
+---
 ## Видео-демонстрация
 [Скачать и посмотреть видео](video/demo.mp4)
